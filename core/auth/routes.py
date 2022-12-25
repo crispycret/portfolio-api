@@ -210,7 +210,6 @@ def login():
     ''' Return an authorization token upon validation of the email and password '''
     data = request.get_json()
 
-
     if ('password' not in data): 
         return {'status': 409, 'msg': 'password required', 'body': {}}
     if ('email' not in data and 'username' not in data): 
